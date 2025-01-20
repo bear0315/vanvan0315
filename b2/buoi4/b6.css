@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    flex-direction: column; /* Căn chỉnh các phần tử theo chiều dọc */
+    height: 100vh; /* Chiều cao toàn bộ màn hình */
+}
+.header {
+    background-color: #0c0f0c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5em;
+}
+.main-content {
+    display: flex; /* Sử dụng Flexbox để chia ra hai phần */
+    flex: 1; /* Nội dung chính chiếm phần không gian còn lại */
+}
+.sidebar {
+    background-color: #f4f4f4;
+    width: 250px; /* Đặt chiều rộng cố định cho sidebar */
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.content {
+    flex: 1; /* Nội dung chính chiếm phần còn lại */
+    padding: 20px;
+    background-color: #fff;
+}
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

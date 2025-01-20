@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layouts</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .layout {
+            margin: 20px auto;
+            max-width: 1200px;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        .header, .footer {
+            background-color: #ffe9c4;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .content {
+            background-color: #d3f5d3;
+            text-align: center;
+            padding: 200px;
+        }
+
+        .left-sidebar, .right-sidebar {
+            background-color: #f8d7da;
+            text-align: center;
+            padding: 20px;
+        }
+        .layout-1 {
+            display: grid;
+            grid-template-areas: 
+                'header header header'
+                'left-sidebar content right-sidebar'
+                'footer footer footer';
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: auto 1fr auto;
+            gap: 10px;
+        }
+
+        .layout-1 .header {
+            grid-area: header;
+        }
+
+        .layout-1 .footer {
+            grid-area: footer;
+        }
+
+        .layout-1 .content {
+            grid-area: content;
+        }
+
+        .layout-1 .left-sidebar {
+            grid-area: left-sidebar;
+        }
+
+        .layout-1 .right-sidebar {
+            grid-area: right-sidebar;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="layout layout-1">
+        <div class="header">Header</div>
+        <div class="left-sidebar">Left sidebar</div>
+        <div class="content">Content</div>
+        <div class="right-sidebar">Right sidebar</div>
+        <div class="footer">Footer</div>
+    </div>
+
+</body>
+</html>

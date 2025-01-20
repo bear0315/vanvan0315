@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .layout {
+            margin: 20px auto;
+            max-width: 1200px;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        .header, .footer {
+            background-color: #ffe9c4;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .content {
+            background-color: #f2f2f2;
+            padding: 20px;
+            display: grid;
+            grid-template-areas: 
+                "box1 box2"
+                "box3 box4"
+                "box5 box5";
+            grid-template-columns: 1fr 1fr; /* Hai cột bằng nhau */
+            gap: 10px; /* Khoảng cách giữa các hộp */
+        }
+
+        .content > div {
+            background-color: #d3f5d3;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content .box1 { 
+            aspect-ratio: 1; /* Hình vuông */
+            grid-area: box1;
+            padding: 25px;
+         }
+        .content .box2 { 
+            grid-area: box2; 
+            aspect-ratio: 1; /* Hình vuông */
+        }
+        .content .box3 { 
+            grid-area: box3;
+            aspect-ratio: 1; /* Hình vuông */ 
+        }
+        .content .box4 { 
+            grid-area: box4; 
+            aspect-ratio: 1; /* Hình vuông */
+        }
+        .content .box5 { 
+            grid-area: box5; 
+        }
+
+        .left-sidebar {
+            background-color: #f8d7da;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .layout-2 {
+            display: grid;
+            grid-template-areas: 
+                'left-sidebar header'
+                'left-sidebar content'
+                'left-sidebar footer';
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: auto 1fr auto;
+            gap: 10px;
+        }
+
+        .layout-2 .header {
+            grid-area: header;
+        }
+
+        .layout-2 .footer {
+            grid-area: footer;
+        }
+
+        .layout-2 .content {
+            grid-area: content;
+        }
+
+        .layout-2 .left-sidebar {
+            grid-area: left-sidebar;
+        }
+    </style>
+</head>
+<body>
+    <div class="layout layout-2">
+        <div class="left-sidebar">Left sidebar</div>
+        <div class="header">Header</div>
+        <div class="content">
+            <div class="box1">Box 1</div>
+            <div class="box2">Box 2</div>
+            <div class="box3">Box 3</div>
+            <div class="box4">Box 4</div>
+            <div class="box5">Box 5</div>
+        </div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

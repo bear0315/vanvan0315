@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      
+    <style>
+        * {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #fff2cd;
+            padding: 10px 20px;
+            display: flex;
+            border: 1px solid orange;
+            justify-content: space-between;
+            align-items: center;    
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo span {
+            margin-left: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: black;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .bar-nav {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+
+        .mycart {
+            background-color: #d9e8fb;
+            color: black;
+            padding: 5px 10px;
+            border: 1px solid #889ebb;
+            border-radius: 5px;
+        }
+
+        .container {
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .images {
+            flex: 1;
+        }
+
+        .images .main-image {
+            width: 100%;
+            height: 300px;
+            background-color: #ddd;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .images .thumbnail {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .images .thumbnail div {
+            width: 100%;
+            height: 70px;
+            background-color: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .details {
+            flex: 2;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .details h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .details p {
+            margin: 10px 0;
+            color: #666;
+        }
+
+        .details .options {
+            margin: 20px 0;
+        }
+
+        .details .options button {
+            background-color: white;
+            padding: 5px 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .details .options button.active {
+            background-color: #b0e3e6;
+            color: black;
+        }
+
+        .details .price {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .details .add-to-cart {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .details .add-to-cart input {
+            width: 50px;
+            text-align: center;
+        }
+
+        .details .add-to-cart button {
+            background-color: #f7cecb;
+            color: black;
+            border:1px solid  #ffaaa4;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .comments {
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+            gap: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .comments .comment {
+            margin-bottom: 20px;
+            border: 1px solid black;
+            flex: 1;
+        }
+
+        .comments .comment .content  {
+            flex:1;
+        }
+        .comments .comment .content h3 {
+            margin: 0;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        .comments .comment p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .comments .comment .rating {
+            color: #cbca0d;
+            font-size: 24px;
+            display: flex;
+            justify-content: start;
+        }
+        
+        .pagination {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .pagination button {
+            background-color: white;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+        }
+
+        footer {
+            background-color: #fff2cd;
+            padding: 10px 20px;
+            border: 1px solid orange;
+            display: flex;
+            justify-content: start;
+            align-items: flex-end;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div style="width: 40px; height: 40px; border-radius: 50%; background-color: #e2d5e7; border: 1px solid #d3bfbc;margin-right: 15px;"></div>
+            <span>My Shop</span>
+        </div>
+        <div class="bar-nav">
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About us</a>
+                <a href="#">Contact</a>
+            </nav>
+            <div class="mycart">My Cart (0)</div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="images">
+            <div class="main-image">IMAGE</div>
+            <div class="thumbnail">
+                <div>IMAGE</div>
+                <div>IMAGE</div>
+                <div>IMAGE</div>
+                <div>IMAGE</div>
+                <div>IMAGE</div>
+                <div>IMAGE</div>
+                <div>IMAGE</div>
+                <div>IMAGE</div>
+            </div>
+        </div>
+
+        <div class="details">
+            <h1>Lorem ipsum dolor</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <div class="options">
+                <button class="active">Blue</button>
+                <button>Red</button>
+                <button>Green</button>
+                <br>
+                <button class="active">Classic</button>
+                <button>Modern</button>
+            </div>
+            <div class="price">Price: $129.01</div>
+            <div>Discount: 10%</div>
+            <div>Rating: 10/10</div>
+            <div>In Stocks: 1004</div>
+            <div class="add-to-cart">
+                <input type="number" value="0" min="0">
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="comments">
+        <div class="comment">
+            <span class="logo">
+                <div style="width: 40px; height: 40px; border-radius: 50%; background-color: #e2d5e7; border: 1px solid #d3bfbc;"></div>
+            </span>
+            <div class="content">
+                <h3>Customer 1 <div class="rating">★★★★★</div></h3>
+                <div style="color: #666; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Ha Noi</div>
+                <div>2022-10-10 19:40:01</div>
+                <p>sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+            </div>
+        </div>
+            <div class="comment">
+                <span class="logo">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background-color: #e2d5e7; border: 1px solid #d3bfbc;"></div>
+                </span>
+                <div class="content">
+                    <h3>Customer 1 <div class="rating">★★★★★</div></h3>
+                    <div style="color: #666; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Ha Noi</div>
+                    <div>2022-10-10 19:40:01</div>
+                    <p>sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+                </div>
+            </div>
+        <div class="pagination">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+        </div>
+    </div>
+
+    <footer>
+        <div>My Shop<br><i class="fas fa-map-marker-alt"></i>22C Somewhere, Ha Noi</div>
+        <div>☎ 09876543210</div>
+    </footer>
+</body>
+</html>

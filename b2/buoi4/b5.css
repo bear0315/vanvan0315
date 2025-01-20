@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các cột tự động xuống dòng */
+    gap: 20px; /* Khoảng cách giữa các cột */
+    padding: 20px;
+}
+.column {
+    flex: 1 1 100%; /* Mặc định mỗi cột chiếm 100% chiều rộng */
+    max-width: 100%; /* Đảm bảo cột không vượt quá 100% */
+}
+.card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 600px) {
+    .column {
+        flex: 1 1 45%; /* Với màn hình rộng hơn 600px, mỗi cột chiếm 45% chiều rộng */
+    }
+}
+
+@media (min-width: 900px) {
+    .column {
+        flex: 1 1 30%; /* Với màn hình rộng hơn 900px, mỗi cột chiếm 30% chiều rộng */
+    }
+}
+
+@media (min-width: 1200px) {
+    .column {
+        flex: 1 1 22%; /* Với màn hình rộng hơn 1200px, mỗi cột chiếm 22% chiều rộng */
+    }
+}

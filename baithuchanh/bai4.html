@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #222121;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo span {
+            margin-left: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        header nav a {
+            margin-left: 15px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .container {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .images .main-image {
+            width: 100%;
+            height: 300px;
+            background-color: #ddd;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, #f0f0f0, #d77da4); /* Màu nhạt lên trên, màu đậm xuống dưới */
+            border-radius: 5px;
+        }
+
+        .image-section .buttons {
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .image-section .buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .share-button {
+            background-color: #f5cecc;
+            border: 1px solid #ee5a52;
+            color: #d9534f;
+        }
+
+        .download-button {
+            background-color: #e3c800;
+            border: 1px solid #726603;
+            color: #fff;
+        }
+
+        .watch-button {
+            background-color: #1ba0e1;
+            border: 1px solid #0a6390;
+            color: #fff;
+        }
+
+        .details-section {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .details-section h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .details-section .subtitle {
+            font-size: 16px;
+            color: #888;
+            margin-bottom: 10px;
+        }
+
+        .details-section .timeline{
+            color: #a8c08f;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .details-section .rating {
+            color: #d1d028;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .details-section .categories {
+            margin-bottom: 15px;
+        }
+
+        .details-section .categories button {
+            padding: 5px 10px;
+            margin-right: 5px;
+            border: 1px solid black;
+            background-color: white;
+            border-radius: 4px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .details-section .info {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .details-section .info p{
+           color: blue;
+        }
+        .details-section .info p strong {
+            color: black;
+        }
+
+        .description {
+            margin-top: 20px;
+            font-size: 14px;
+            background-color: white;
+            border: 1px solid #090909;
+            border-radius: 4px;
+            padding: 15px;
+        }
+
+        .actors-section {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .actor {
+            text-align: center;
+            width: 100px;
+            font-size: 14px;
+        }
+        .actor p{
+            color:#a8c08f ;
+        }
+
+        .actor .icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #27a8e1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #333;
+        }
+        .actor .icon i{
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div style="width: 40px; height: 40px; background-color: #e3c800; border-radius: 50%;"></div>
+            <span>Hello Film</span>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Top Film</a>
+            <a href="#">Categories</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="image-section">
+            <div class="images">
+                <div class="main-image">IMAGE</div>
+            </div>
+            <div class="buttons">
+                <button class="share-button">Chia sẻ</button>
+                <button class="download-button">Tải xuống</button>
+                <button class="watch-button">Xem phim</button>
+            </div>
+        </div>
+
+        <div class="details-section">
+            <h1>Unknown Battle</h1>
+            <p class="subtitle">Trận Chiến Rzhev (2019)</p>
+            <p class="timeline">2 giờ 17 phút</p>
+            <p class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+            <div class="categories">
+                <button>Chiến tranh</button>
+                <button>Chính kịch</button>
+            </div>
+
+            <div class="info">
+                <p><strong>Đạo diễn:</strong> Igor Kopylov</p>
+                <p><strong>Quốc gia:</strong> Nga</p>
+                <p><strong>Khởi chiếu:</strong> 12/05/2019</p>
+            </div>
+        </div>
+
+        <div class="description">
+            <h3>Mô tả</h3>
+            <p>
+                Bộ phim hành động chiến tranh với nhiều cảnh chiến đấu mãn nhãn, lột tả hết sự khốc liệt và tàn nhẫn của chiến tranh với những con người, những số phận nhỏ bé bị xoáy vào cuộc chiến. 
+                Đó là anh chàng Kostya gan dạ nhưng cũng hết sức liêm khiết, là anh đại đội trưởng lâu dần vẽ mang sống của những người đồng chí dưới quyền. Tình cảnh căng thẳng đưa mọi người tới sát mép vực.
+            </p>
+        </div>
+
+        <div class="actors-section">
+            <div class="actor">
+                <div class="icon"><i class="fas fa-user-alt"></i></div>
+                <p>Sergey Zharkov</p>
+            </div>
+            <div class="actor">
+                <div class="icon"><i class="fas fa-user-alt"></i></div>
+                <p>Ivan Batarev</p>
+            </div>
+            <div class="actor">
+                <div class="icon"><i class="fas fa-user-alt"></i></div>
+                <p>Oleg Gayanov</p>
+            </div>
+            <div class="actor">
+                <div class="icon"><i class="fas fa-user-alt"></i></div>
+                <p>Arseny Semenov</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

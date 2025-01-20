@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #c0a124;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .product-details {
+            flex: 1;
+            min-width: 300px;
+            margin-right: 20px;
+        }
+
+        .product-images {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .product-images img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+        }
+
+        .product-info {
+            flex: 2;
+        }
+
+        .product-info h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .product-info .price {
+            color: #3cc2e7;
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .product-info .discount {
+            color: #27ae60;
+        }
+
+        .product-info button {
+            background-color: #3cc2e7;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        .comments {
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+
+        .comment {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .comment:last-child {
+            border-bottom: none;
+        }
+
+        footer {
+            margin-top: 20px;
+            background-color: #c0a124;
+            padding: 15px 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">My Shop</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About us</a>
+            <a href="#">Contact</a>
+            <a href="#">My Cart (0)</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="product-details">
+            <div class="main-image">
+                <img src="sang.jpg" alt="Product Image" style="width:100%; border: 1px solid #ddd;">
+            </div>
+            <div class="product-images">
+                <img src="sang.jpg" alt="Thumbnail">
+                <img src="sang.jpg" alt="Thumbnail">
+                <img src="sang.jpg" alt="Thumbnail">
+                <img src="sang.jpg" alt="Thumbnail">
+            </div>
+        </div>
+
+        <div class="product-info">
+            <h1>Lorem ipsum dolor</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Color: <button>Blue</button> <button>Red</button> <button>Green</button></p>
+            <p>Design: <button>Classic</button> <button>Modern</button></p>
+            <p class="price">Price: $120.01 <span class="discount">(10% Discount)</span></p>
+            <p>Rating: ★★★★★</p>
+            <p>In Stock: 10</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="comments container">
+        <h2>Comments</h2>
+        <div class="comment">
+            <p><strong>Customer 1</strong> (2022-10-10 10:42):</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Rating: ★★★★☆</p>
+        </div>
+        <div class="comment">
+            <p><strong>Customer 2</strong> (2022-10-11 10:42):</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Rating: ★★★★☆</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>My Shop | 22C Somewhere, Ha Noi | 0967543210</p>
+    </footer>
+</body>
+</html>

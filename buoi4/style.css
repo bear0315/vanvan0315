@@ -1,0 +1,20 @@
+.box{
+    width: 300px;
+    height: 600px;
+}
+.box_green{
+    background-color: green;
+}
+.box_red{
+    background-color: red;
+}
+.box_pink{
+    background-color: pink;
+}
+.parent{
+    background-color: bisque;
+    display: flex;
+    justify-content: space-around;
+    height: 400px;
+    align-items: center;
+}

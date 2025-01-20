@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.menu {
+    background-color: #333;
+    padding: 10px 0;
+}
+.menu-list {
+    display: flex; /* Sử dụng Flexbox để sắp xếp các mục menu */
+    justify-content: space-around; /* Căn đều các mục menu trong không gian */
+    list-style: none; /* Xóa dấu chấm đầu dòng của danh sách */
+}
+.menu-item {
+    padding: 10px 20px;
+}
+.menu-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.menu-item a:hover {
+    color: #4CAF50; 
+}

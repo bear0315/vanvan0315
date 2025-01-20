@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Layout Example</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .card-description {
+            font-size: 14px;
+            color: #666;
+            margin: 0 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Placeholder">
+            <div class="card-title">Card 1</div>
+            <div class="card-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Placeholder">
+            <div class="card-title">Card 2</div>
+            <div class="card-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</div>
+        </div>
+    </div>
+</body>
+</html>

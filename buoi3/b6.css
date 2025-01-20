@@ -1,0 +1,51 @@
+/* Định kiểu chung cho body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Định kiểu cho thẻ thông tin người dùng */
+.user-card {
+    width: 300px; /* Chiều rộng thẻ người dùng */
+    margin: 50px auto; /* Căn giữa thẻ người dùng */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+/* Định kiểu cho phần hình đại diện */
+.user-avatar {
+    margin-right: 20px; /* Khoảng cách giữa hình đại diện và thông tin */
+}
+
+.user-avatar img {
+    width: 100px; /* Chiều rộng hình đại diện */
+    height: 100px; /* Chiều cao hình đại diện */
+    border-radius: 50%; /* Tạo hình tròn cho hình đại diện */
+    object-fit: cover; /* Cắt hình ảnh để vừa với khung hình */
+}
+
+/* Định kiểu cho phần thông tin người dùng */
+.user-info {
+    flex-grow: 1; /* Phần thông tin chiếm phần còn lại của thẻ */
+}
+
+/* Định kiểu cho tên người dùng */
+.user-name {
+    font-size: 20px;
+    color: #333;
+    margin: 0;
+}
+
+/* Định kiểu cho mô tả ngắn của người dùng */
+.user-description {
+    font-size: 14px;
+    color: #777;
+    margin-top: 8px;
+}

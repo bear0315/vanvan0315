@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #c0a124;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        .form-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .form-section div {
+            flex: 1;
+            margin-right: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+
+        .form-section div:last-child {
+            margin-right: 0;
+        }
+
+        .form-section label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-section input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .form-section input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .cart {
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        .cart-item img {
+            width: 80px;
+            height: 80px;
+            border: 1px solid #ddd;
+            margin-right: 20px;
+        }
+
+        .cart-item-info {
+            flex: 2;
+        }
+
+        .cart-item-actions {
+            display: flex;
+            align-items: center;
+        }
+
+        .cart-item-actions input {
+            width: 50px;
+            padding: 5px;
+            text-align: center;
+            margin: 0 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .cart-item-actions button {
+            background-color: #3cc2e7;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .cart-item-actions button:hover {
+            background-color: #3cc2e7;
+        }
+
+        .submit-order {
+            text-align: right;
+        }
+
+        .submit-order button {
+            background-color: #27ae60;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        footer {
+            margin-top: 20px;
+            background-color: #c0a124;
+            padding: 15px 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">My Shop</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About us</a>
+            <a href="#">Contact</a>
+            <a href="#">My Cart (0)</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="form-section">
+            <div>
+                <h3>Your Information</h3>
+                <label for="fullname">Full name *</label>
+                <input type="text" id="fullname" placeholder="Enter your name">
+                <label for="phone">Phone number *</label>
+                <input type="text" id="phone" placeholder="Enter your phone">
+                <label for="address">Address *</label>
+                <input type="text" id="address" placeholder="Enter your address">
+            </div>
+            <div>
+                <h3>Payment Method</h3>
+                <label><input type="radio" name="payment" value="credit"> Credit card</label><br>
+                <label><input type="radio" name="payment" value="bank"> Your bank</label><br>
+                <label><input type="radio" name="payment" value="momo"> Momo</label>
+            </div>
+        </div>
+
+        <div class="cart">
+            <h3>Cart</h3>
+            <div class="cart-item">
+                <img src="sang.jpg" alt="Product">
+                <div class="cart-item-info">
+                    <p>Lorem ipsum dolor</p>
+                    <button>Blue</button> <button>Classic</button>
+                </div>
+                <div class="cart-item-actions">
+                    <input type="number" value="2">
+                    <button>Remove</button>
+                </div>
+                <p>Total: $210</p>
+            </div>
+
+            <div class="cart-item">
+                <img src="sang.jpg" alt="Product">
+                <div class="cart-item-info">
+                    <p>Lorem ipsum dolor</p>
+                    <button>Blue</button> <button>Classic</button>
+                </div>
+                <div class="cart-item-actions">
+                    <input type="number" value="2">
+                    <button>Remove</button>
+                </div>
+                <p>Total: $210</p>
+            </div>
+
+            <div class="cart-item">
+                <img src="sang.jpg" alt="Product">
+                <div class="cart-item-info">
+                    <p>Lorem ipsum dolor</p>
+                    <button>Blue</button> <button>Classic</button>
+                </div>
+                <div class="cart-item-actions">
+                    <input type="number" value="2">
+                    <button>Remove</button>
+                </div>
+                <p>Total: $210</p>
+            </div>
+        </div>
+
+        <div class="submit-order">
+            <button>Submit Order</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>My Shop | 22C Somewhere, Ha Noi | 0967543210</p>
+    </footer>
+</body>
+</html>

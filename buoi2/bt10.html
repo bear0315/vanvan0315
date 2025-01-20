@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Need Help? Sure we are Online!</h1>
+        <p class="form-description">
+            Let us give you more details about the special offer website you want us. Please fill out the form below. <br>
+            We have millions of website owners who are happy to work with us!
+        </p>
+        <form class="contact-form">
+            <div class="form-row">
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
+            </div>
+            <div class="form-row">
+                <input type="email" placeholder="Your Email" required>
+                <input type="tel" placeholder="Your Phone" required>
+            </div>
+            <div class="form-row">
+                <select required>
+                    <option value="" disabled selected>Select Country</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                    <option value="Canada">Canada</option>
+                    <option value="VietNam">Việt Nam</option>
+                </select>
+                <select required>
+                    <option value="" disabled selected>Select Course</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Data Science">Data Science</option>
+                    <option value="UI/UX Design">UI/UX Design</option>
+                </select>
+            </div>
+            <textarea placeholder="Content" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

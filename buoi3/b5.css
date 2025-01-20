@@ -1,0 +1,53 @@
+/* Định kiểu chung cho body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Định kiểu cho container chứa danh sách bài viết */
+.blog-posts {
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+/* Định kiểu cho danh sách bài viết */
+.post-list {
+    list-style: none; /* Loại bỏ dấu chấm mặc định của list */
+    margin: 0;
+    padding: 0;
+}
+
+/* Định kiểu cho từng mục bài viết */
+.post-item {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+/* Định kiểu cho tiêu đề bài viết */
+.post-title {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Định kiểu cho đoạn mô tả */
+.post-description {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Hiệu ứng hover cho từng bài viết */
+.post-item:hover {
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}

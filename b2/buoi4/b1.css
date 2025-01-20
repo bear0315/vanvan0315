@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.header {
+    background-color: #080908;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+}
+.main-content {
+    display: flex;
+    flex: 1;
+    padding-top: 80px; /* Để nội dung không bị che bởi header */
+    padding-bottom: 60px; /* Để nội dung không bị che bởi footer */
+}
+.left-column,
+.right-column {
+    flex: 1;
+    padding: 5px;
+}
+.left-column {
+    background-color: #f2f2f2;
+}
+.right-column {
+    background-color: #e0e0e0;
+}

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #fff2cd;
+            padding: 10px 20px;
+            display: flex;
+            border: 1px solid orange;
+            justify-content: space-between;
+            align-items: center;    
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo span {
+            margin-left: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: black;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .bar-nav {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+        .mycart {
+            background-color: #d9e8fb;
+            color: black;
+            padding: 5px 10px;
+            border: 1px solid #889ebb;
+            border-radius: 5px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .container h2 {
+            margin-top: 0;
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: space-between;
+            /* border: 1px solid #ccc; */
+            border-radius: 8px;
+            padding: 0;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-section {
+            flex: 1;
+            /* margin-right: 20px; */
+            border: 1px solid #ccc;
+        }
+        .secion-1{
+            border-right: 1px solid #ccc;
+        }
+
+        .secion-2{
+            border-left: 0px solid #ccc;
+        }
+
+        .form-section:last-child {
+            margin-right: 0;
+            width: 400px;
+        }
+
+        .form-section h3 {
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .form-section label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .form-section input[type="text"] {
+            width: 400px;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .form-section .payment-options {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-section .payment-options label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 14px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .form-section .payment-options input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .required {
+            color: red;
+        }
+
+        .cart {
+            margin-top: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        /* .cart-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+        } */
+        .images .main-image {
+            width: 85px;
+            height: 70px;
+            background-color: #ddd;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cart-item .item-details {
+            flex: 2;
+            padding-left: 10px;
+        }
+
+        .item-details .item-options .active {
+            background-color: #b0e3e6;
+            color: black;
+            width: 85px;
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            border: 1px solid #78e3e9;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cart-item .item-options {
+            display: flex;
+            flex-direction: row;
+        }
+        input[type="number"] {
+            width: 30px;
+        } 
+
+        .cart-item .remove {
+            background-color: #f7cecc;
+            color: black;
+            width: 85px;
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            border: 1px solid #f77872;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cart-item .item-options button:hover {
+            background-color: #f7cecc;
+        }
+
+        .footer {
+            background-color: #fff8e1;
+            padding: 10px 20px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            margin-top: 20px;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        button.submit-order {
+            background-color: #d9e8fb;
+            color: black;
+            padding: 10px 20px;
+            border: 1px solid #90bdf8;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button.submit-order:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background-color: #fff2cd;
+            padding: 10px 20px;
+            border: 1px solid orange;
+            display: flex;
+            justify-content: start;
+            align-items: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div style="width: 40px; height: 40px; border-radius: 50%; background-color: #e2d5e7; border: 1px solid #d3bfbc;margin-right: 15px;"></div>
+            <span>My Shop</span>
+        </div>
+        <div class="bar-nav">
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About us</a>
+                <a href="#">Contact</a>
+            </nav>
+            <div class="mycart">My Cart (0)</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <form>
+            <div class="form-container">
+                <div class="form-section secion-1">
+                    <h3>Your Information</h3>
+                    <label for="full-name">Full name <span class="required">*</span></label>
+                    <input type="text" id="full-name" name="full-name" required>
+        
+                    <label for="phone-number">Phone number <span class="required">*</span></label>
+                    <input type="text" id="phone-number" name="phone-number" required>
+        
+                    <label for="address">Address <span class="required">*</span></label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+        
+                <div class="form-section secion-2">
+                    <h3>Payment Method <span class="required">*</span></h3>
+                    <div class="payment-options">
+                        <label>
+                            <input type="radio" name="payment-method" value="credit-card" required>
+                            Credit card
+                        </label>
+                        <label>
+                            <input type="radio" name="payment-method" value="bank" required>
+                            Your bank
+                        </label>
+                        <label>
+                            <input type="radio" name="payment-method" value="momo" required>
+                            Momo
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div class="cart">
+            <h2>Cart</h2>
+            <div class="cart-item">
+                <div class="images">
+                    <div class="main-image">IMAGE</div>
+                </div>
+                <div class="item-details">
+                    <p>Lorem ipsum dolor</p>
+                    <div class="item-options">
+                        <button class="active">Blue</button>
+                        <button class="active">Classic</button>
+                    </div>
+                </div>
+                <div>
+                    <label><input type="number" value="2" min="1"> <br> Total:$210</label>
+                </div>
+                <button class="remove">Remove</button>
+            </div>
+            <div class="cart-item">
+                <div class="images">
+                    <div class="main-image">IMAGE</div>
+                </div>
+                <div class="item-details">
+                    <p>Lorem ipsum dolor</p>
+                    <div class="item-options">
+                        <button class="active">Blue</button>
+                        <button class="active">Classic</button>
+                    </div>
+                </div>
+                <div>
+                    <label><input type="number" value="2" min="1"> <br> Total:$210</label>
+                </div>
+                <button class="remove">Remove</button>
+            </div>
+            <div class="cart-item">
+                <div class="images">
+                    <div class="main-image">IMAGE</div>
+                </div>
+                <div class="item-details">
+                    <p>Lorem ipsum dolor</p>
+                    <div class="item-options">
+                        <button class="active">Blue</button>
+                        <button class="active">Classic</button>
+                    </div>
+                </div>
+                <div>
+                    <label><input type="number" value="2" min="1"><br>Total:$210</label>
+                </div>
+                <button class="remove">Remove</button>
+            </div>
+            <div class="cart-item">
+                <div class="images">
+                    <div class="main-image">IMAGE</div>
+                </div>
+                <div class="item-details">
+                    <p>Lorem ipsum dolor</p>
+                    <div class="item-options">
+                        <button class="active">Blue</button>
+                        <button class="active">Classic</button>
+                    </div>
+                </div>
+                <div>
+                    <label>Qty: <input type="number" value="2" min="1"><br>Total:$210</label>
+                </div>
+                <button class="remove">Remove</button>
+            </div>
+
+            <button class="submit-order">Submit Order</button>
+        </div>
+    </div>
+
+    <footer>
+        <div>My Shop<br><i class="fas fa-map-marker-alt"></i>22C Somewhere, Ha Noi</div>
+        <div>☎ 09876543210</div>
+    </footer>
+</body>
+</html>

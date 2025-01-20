@@ -1,0 +1,67 @@
+/* Định kiểu chung cho body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Định kiểu cho nút mở hộp thoại */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Định kiểu cho hộp thoại */
+.modal {
+    display: none; /* Ẩn hộp thoại mặc định */
+    position: fixed;
+    z-index: 1; /* Đảm bảo hộp thoại luôn hiển thị trên cùng */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Nền mờ phía sau hộp thoại */
+    padding-top: 100px; /* Khoảng cách từ trên cùng */
+    box-sizing: border-box;
+}
+
+/* Định kiểu cho nội dung của hộp thoại */
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Định kiểu cho nút đóng hộp thoại */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
