@@ -499,4 +499,4 @@ let posts = [
 	},
 ];
 
-module.exports = posts;
+export default posts;
